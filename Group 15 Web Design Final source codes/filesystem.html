@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="filesystemstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="https://ukzn.ac.za" target="_blank" id="navbar__logo"><img id="ukznlogo"src="/images/ukznlogo.png" alt="">UKZN - Computer Engineering</a>
+            <div class="navbar__toggle" id="mobile-menu">
+
+                <ul class="navbar__menu">
+
+                    <li class="navbar__item">
+                        <a href="/index.html" class="navbar__links">
+                            Home
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="https://ics.ukzn.ac.za/student-help-and-support/" target="blank"class="navbar__links">
+                            Students Help
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/tech.html" class="navbar__links">
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/tech.html" class="navbar__links">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li class="navbar__btn">
+                        <a href="/login.html" class="button">
+                            Admin
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div id="body1">
+        <div class="wrapper">
+        <header>Upload Documents</header>
+        <form action="#">
+          <input class="file-input" type="file" name="file" hidden>
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p>Browse File to Upload</p>
+        </form>
+        <section class="progress-area"></section>
+        <section class="uploaded-area"></section>
+      </div></div>
+
+
+  <script src="filesystemupload.js"></script>
+  <footer class="footer">
+    <div class="container1">
+        <div class="row">
+            <div class="footer-col">
+                <h4>University Of KwaZulu-Natal</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="https://ukzn.ac.za/general/privacy-policy/#:~:text=We%20do%20not%20store%20any,us%20to%20process%20your%20request." target="black">Privacy Policy</a></li>
+                    <li><a href="#">Our Goal</a></li>
+                    <li><a href="#">Our Vision</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Report A Bug</a></li>
+                    <li><a href="#">Contact Webmaster</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="#">PMB: +27 33 260 5111</a></li>
+                    <li><a href="#">DBN: +27 31 260 1111</a></li>
+                    <li><a href="#">Call +27 31 260 8596 and follow the voice prompts</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Stay Connected With UKZN</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ukzn1"target="_blank"><img class="social"src="/images/facebook.png" alt=""><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/ukzn/"target="_blank"><img class="social"src="/images/twitter.png" alt=""><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/user/UKZNSouthAfrica"target="_blank"><img class="social"src="/images/youtube.png" alt=""><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/ukzn/"target="_blank"><img class="social"src="/images/instagram.png" alt=""><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://ukzn.ac.za" target="_blank"><img class="social"src="/images/ukznlogobnw.png" alt=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footq">
+        <h1>INSPIRING GREATNESS</h1>
+    </div>
+</footer>
+</body>
+</html>

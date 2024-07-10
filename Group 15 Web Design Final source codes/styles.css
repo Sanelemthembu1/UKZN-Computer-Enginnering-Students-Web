@@ -1,0 +1,445 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans',sans-serif;
+}
+.navbar{
+    background: #e208ff73;
+    height: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    writing-mode: horizontal-tb;
+
+}
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width:100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    writing-mode: horizontal-tb;
+}
+#navbar__logo{
+    background-color:purple;
+    background-image: linear-gradient(to top,purple 100%,#e208ff59 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-backround-clip:text;
+    -webkit-text-fill-color:transparent;
+    -moz-text-fill-color:transparent;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+.fa-gem{
+    margin-right:0.5rem;
+}
+.navbar__menu{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+
+
+}
+.navbar__item{
+    height: 70px
+}
+.navbar__links{
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 2rem;
+    width: 100%;
+    height: 100%;
+
+
+}
+.navbar__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height:80px;
+    width: 100px;
+    border:none;
+    outline: none;
+    border-radius: 4px;
+    background: #e208ff73;
+    color: #fff;
+}
+.button:hover{
+    background:purple;
+    height: 85px;
+    width: 105px;
+    transition: all 0.4s ease;
+}
+.navbar__links:hover{
+    color:purple;
+    transition: all 0.3s ease;
+    background: #e208ffa4;
+}
+#ukznlogo:hover{
+    height: 3.5rem;
+    width: 3.5rem;
+    transition: all 0.4s ease;
+}
+#navbar__logo:hover{
+    color: purple;
+    transition: all 0.4s ease;
+}
+
+
+h3{
+    font:italic;
+}
+#ukznlogo{
+height: 3rem;
+width: 3rem;
+}
+#howardimg{
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-image: url(/images/howardcollege2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .login-wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    padding: 80px 40px 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0.5);
+    text-align: center; /* Center the text inside the form */
+  }
+  
+  .form img {
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px); /* Center the avatar */
+    width: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+  }
+  
+  .form h2 {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    color: purple;
+    font-weight: bold; /* Make it bold */
+    font-size: 1.5rem; /* Increase the text size */
+    font-family: 'Your Desired Font', sans-serif; /* Modify the font family */
+  }
+  
+  
+  .form .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .form .input-group label {
+    display: block;
+    font-size: 1rem;
+    color: white; /* Set the label color to purple */
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  
+  .form .input-group input {
+    width: 100%;
+    padding: 10px 0; /* Remove horizontal padding */
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    background: transparent; /* Make the input box transparent */
+    color: inherit;
+  
+    /* Add a border at the bottom */
+    border-bottom: 2px solid #e208ff73;
+  }
+  
+  .form .input-group input:focus,
+  .form .input-group input:valid {
+    border-bottom: 2px solid #e208ff73;
+  }
+  
+  .form .input-group input:focus + label,
+  .form .input-group input:valid + label {
+    font-size: 0.8rem;
+    color: #e208ff73;
+  }
+  
+
+.submit-btn{
+display:block;
+margin-left:auto;
+border:none;
+outline:none;
+background: #e208ff73;
+font-size: 1rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+padding: 10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+.submit-btn:hover{
+    background-color:purple;
+
+}
+  .forgot-pw{
+color:inherit;
+  }
+  #forgot-pw{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left:0;
+    right: 0;
+    height: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0%;
+    transition: 0.6s;
+  }
+  #forgot-pw:target{
+    height: 100%;
+    opacity: 1;
+  }
+  .close{
+    position: absolute;
+    right: 1.5rem;
+    top:0.5rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .container1{
+	max-width: 1170px;
+	margin:auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+
+.footer{
+	background-color: #3b2d42;
+    padding: 30px 0;
+    background: rgba(0,0,0,0.7);
+border-radius: 25px;
+color: #fff;
+box-shadow: 0 15px 25px rgba(0,0,0.5);
+bottom: 0;
+}
+
+.footer-col{
+   width: 25%;
+   padding: 0 10px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e208ff73;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #503355;
+	background-color: #64316d;
+}
+
+#footq{
+
+    background-color: red;
+    text-align: center;
+    bottom: 0;
+    z-index: 1;
+    position: sticky;
+
+    color: white;
+}
+ul{
+    list-style: none;
+}
+
+.social{
+    height:2rem;
+    width: 2rem;
+}
+.coursesrow{
+
+
+    width: 100%;
+    max-width: 380px;
+    padding: 70px 40px 40px;
+    background: rgba(99, 63, 63, 0.5);
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 15px 25px rgba(0,0,0.7);
+
+
+}
+
+.tabs{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.coursesrow:hover{
+
+    background: rgba(0,0,0,0.8);;
+    padding: 75px 45px 45px;
+
+    transition: all 0.5s ease;
+
+}
+.headings{
+    background-color:purple;
+    background-image: linear-gradient(to top,purple 0%,#e208ff73 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-backround-clip:text;
+    -webkit-text-fill-color:transparent;
+    -moz-text-fill-color:transparent;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.course_links{
+padding: 2px 0;
+}
+.course_links{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #e208ff73;
+	text-decoration: none;
+	font-weight: 300;
+	color: #e208ff73;
+	display: block;
+	transition: all 0.3s ease;
+}
+.course_links:hover{
+	color:purple;
+	padding-left: 8px;
+}
+
+th{
+    color:purple ;
+}
+td{
+    color: white;
+}
+#foot{
+    position: absolute;
+    bottom: 0;
+    position: sticky;
+}
+.labels{
+    color: white;
+}
+.do{
+    border: none;
+    height: 40px;
+    width: 60px;
+    background-color:#e208ff73;
+    border-radius: 5px;
+}
+.do:hover{
+    height: 45px;
+    width: 65px;
+    background-color: #e208ffb4;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The New UKZN Webpage for CE Students</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/images/ukznlogo.png">
+        <link rel="stylesheet" href="styles.css">
+        <script src="app.js"></script>
+        <style>
+
+            .container{overflow: hidden}
+            .tab{float: left;}
+            .tab-2{margin-left: 50px}
+            .tab-2 input{display: block;margin-bottom: 10px}
+            tr{transition:all .25s ease-in-out}
+            tr:hover{background-color:rgb(147, 132, 132);cursor: pointer}
+
+        </style>
+
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="https://ukzn.ac.za" target="_blank" id="navbar__logo"><img id="ukznlogo"src="/images/ukznlogo.png" alt="">UKZN - Computer Engineering</a>
+                <div class="navbar__toggle" id="mobile-menu">
+
+                    <ul class="navbar__menu">
+
+                        <li class="navbar__item">
+                            <a href="/index.html" class="navbar__links">
+                                Home
+                            </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="https://ics.ukzn.ac.za/student-help-and-support/"target="blank" class="navbar__links">
+                                Students Help
+                            </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/tech.html" class="navbar__links">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="/tech.html" class="navbar__links">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li class="navbar__btn">
+                            <a href="/login.html" class="button">
+                                Admin
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+<div  id="enroller">
+    <div class="container">
+        <div class="tab tab-1">
+            <table id="table" border="1">
+                <tr>
+                    <th>Student Number</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+                <tr>
+                    <td>220087132</td>
+                    <td>Sanele</td>
+                    <td>Mthembu</td>
+                </tr>
+                <tr>
+                    <td>222018801</td>
+                    <td>Nkosinathi</td>
+                    <td>Ngubane</td>
+                </tr>
+                <tr>
+                    <td>222035670</td>
+                    <td>Seluleko</td>
+                    <td>Nyoka</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab tab-2">
+            <label class="labels"for="fname">Student Number :</label><input type="text" name="fname" id="fname">
+            <label class="labels"for="lname">First Name :</label><input type="text" name="lname" id="lname">
+            <label class="labels"for="age">Last Name :</label><input type="text" name="age" id="age">
+
+            <button onclick="addHtmlTableRow();" class="do">Add</button>
+            <button onclick="editHtmlTbleSelectedRow();"class="do">Edit</button>
+            <button onclick="removeSelectedRow();"class="do">Remove</button>
+        </div>
+    </div>
+</div>
+
+
+        <script>
+
+            var rIndex,
+                table = document.getElementById("table");
+
+            // check the empty input
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                    fname = document.getElementById("fname").value,
+                    lname = document.getElementById("lname").value,
+                    age = document.getElementById("age").value;
+
+                if(fname === ""){
+                    alert("First Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(lname === ""){
+                    alert("Last Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(age === ""){
+                    alert("Age Connot Be Empty");
+                    isEmpty = true;
+                }
+                return isEmpty;
+            }
+
+            // add Row
+            function addHtmlTableRow()
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(!checkEmptyInput()){
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    fname = document.getElementById("fname").value,
+                    lname = document.getElementById("lname").value,
+                    age = document.getElementById("age").value;
+
+                cell1.innerHTML = fname;
+                cell2.innerHTML = lname;
+                cell3.innerHTML = age;
+                // call the function to set the event to the new row
+                selectedRowToInput();
+            }
+            }
+
+            // display selected row data into input text
+            function selectedRowToInput()
+            {
+
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                      // get the seected row index
+                      rIndex = this.rowIndex;
+                      document.getElementById("fname").value = this.cells[0].innerHTML;
+                      document.getElementById("lname").value = this.cells[1].innerHTML;
+                      document.getElementById("age").value = this.cells[2].innerHTML;
+                    };
+                }
+            }
+            selectedRowToInput();
+
+            function editHtmlTbleSelectedRow()
+            {
+                var fname = document.getElementById("fname").value,
+                    lname = document.getElementById("lname").value,
+                    age = document.getElementById("age").value;
+               if(!checkEmptyInput()){
+                table.rows[rIndex].cells[0].innerHTML = fname;
+                table.rows[rIndex].cells[1].innerHTML = lname;
+                table.rows[rIndex].cells[2].innerHTML = age;
+              }
+            }
+
+            function removeSelectedRow()
+            {
+                table.deleteRow(rIndex);
+                // clear input text
+                document.getElementById("fname").value = "";
+                document.getElementById("lname").value = "";
+                document.getElementById("age").value = "";
+            }
+        </script>
+   <footer class="footer" id="foot">
+    <div class="container1">
+        <div class="row">
+            <div class="footer-col">
+                <h4>University Of KwaZulu-Natal</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="https://ukzn.ac.za/general/privacy-policy/#:~:text=We%20do%20not%20store%20any,us%20to%20process%20your%20request." target="black">Privacy Policy</a></li>
+                    <li><a href="#">Our Goal</a></li>
+                    <li><a href="#">Our Vision</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Report A Bug</a></li>
+                    <li><a href="#">Contact Webmaster</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="#">PMB: +27 33 260 5111</a></li>
+                    <li><a href="#">DBN: +27 31 260 1111</a></li>
+                    <li><a href="#">Call +27 31 260 8596 and follow the voice prompts</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Stay Connected With UKZN</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ukzn1"target="_blank"><img class="social"src="/images/facebook.png" alt=""><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/ukzn/"target="_blank"><img class="social"src="/images/twitter.png" alt=""><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/user/UKZNSouthAfrica"target="_blank"><img class="social"src="/images/youtube.png" alt=""><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/ukzn/"target="_blank"><img class="social"src="/images/instagram.png" alt=""><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://ukzn.ac.za" target="_blank"><img class="social"src="/images/ukznlogobnw.png" alt=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footq">
+        <h1>INSPIRING GREATNESS</h1>
+    </div>
+</footer>
+    </body>
+</html>
